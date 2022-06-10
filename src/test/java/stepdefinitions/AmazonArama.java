@@ -31,6 +31,11 @@ public class AmazonArama {
         page.amazonArama.sendKeys("Camera"+Keys.ENTER);
     }
 
+    @Given("kullanici arama kutusuna {string} yazar ve arar")
+    public void kullanici_arama_kutusuna_yazar_ve_arar(String string) {
+        page.amazonArama.sendKeys(string+Keys.ENTER);
+    }
+
 
 
 }
