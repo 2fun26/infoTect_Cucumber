@@ -22,6 +22,7 @@ public class AmazonArama {
 
     @Then("kullanici sonucu ekrana yazdirir")
     public void kullanici_sonucu_ekrana_yazdirir() {
+
         System.out.println(page.amazonSonuc.getText());
     }
 

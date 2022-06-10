@@ -7,6 +7,7 @@ import utilities.Driver;
 
 public class GoogleAramaPage {
     public GoogleAramaPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath="//*[.='I agree']")

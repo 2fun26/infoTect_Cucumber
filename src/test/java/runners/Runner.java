@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
        plugin = {"html:target/default-cucumber-reports"},//Raporlarimizi olusturmak icin yazdik
         features = "src/test/resources/features",//features klasorunun path'i senaryolara ulasmak icin
         glue = "src/test/java/stepdefinitions",// testlerimizin oldugu dosyalara ulasmak icin
-        tags = "@amazonArama",
-        dryRun = true
-      // dryRun = false
+       //tags = "@amazonCameraArama",
+       //dryRun = true
+      dryRun = false
 )
 
 
