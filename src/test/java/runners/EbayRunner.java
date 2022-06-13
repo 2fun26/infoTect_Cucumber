@@ -1,19 +1,24 @@
 package runners;
 
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"html:target/default-cucumber-reports"},//Raporlarimizi olusturmak icin yazdik
-        features = "src/test/resources/features",//features klasorunun path'i senaryolara ulasmak icin
-        glue = "src/test/java/stepdefinitions",// testlerimizin oldugu dosyalara ulasmak icin
-        //tags = "",
-        dryRun = true
+        plugin = {"html:target/default-cucumber-reports",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"},  // rapor oluşturmak için
+        features = "src/test/resources/features",    // features klasörünün adresini
+        glue = "stepdefinitions",      // testlerinin içerisinde olduğu paketin ismi
+        tags = "@ebayUrunArama", // seçtiğiniz tag'a ait testler çalıştırılır.
+        dryRun = false // senaryoda oluşturduğumuz anca henüz test methodu yazılmamış
+        // olan adımların(steps) methodlarını consol'da görmek için "dryRun = true"
+        // şeklinde kullanıyoruz.
+        // dryRun = false olursa, testleri çalıştırır.
+        // dryRun = true  olursa, eksik olan methodları bulur ve size öneride bulunur.
 )
 
-
 public class EbayRunner {
-
 }

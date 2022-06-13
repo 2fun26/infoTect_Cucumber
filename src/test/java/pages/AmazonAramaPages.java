@@ -8,7 +8,6 @@ import utilities.Driver;
 public class AmazonAramaPages {
 
     public AmazonAramaPages(){
-
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -16,5 +15,8 @@ public class AmazonAramaPages {
     public WebElement amazonArama;
     @FindBy(className="sg-col-inner")
     public WebElement amazonSonuc;
+    @FindBy(id="searchDropdownBox")
+    public WebElement dropDropdownBox;
+
 
 }
